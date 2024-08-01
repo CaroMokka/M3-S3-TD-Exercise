@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Facturacion</title>
+</head>
+
+<body>
+
+
+    <main class="row p-5 m-5">
+        <section class="col-4">
+            <h3>Ingrese producto</h3>
+            <div class="card" >
+                <div class="card-body">
+                    <form id="form-products">
+                        <div class="mb-3">
+                            <label for="form-select-product" class="form-label">Seleccione un producto</label>
+                            <select id="form-select-product" class="form-select" >
+                                <option value="">Seleccione</option>
+                                <option value="Manzanas">Manzanas</option>
+                                <option value="Detergente">Detergente</option>
+                                <option value="Cafe">Cafe</option>
+                            </select>
+                            <div id="msg-product" class="form-text text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="add-price" class="form-label">Precio Unitario</label>
+                          <input type="text" class="form-control" id="price-product">
+                          <div id="msg-price" class="form-text text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="add-quantity" class="form-label">Cantidad</label>
+                          <input type="text" class="form-control" id="quantity-product">
+                          <div id="msg-quantity" class="form-text text-danger"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                      </form>
+                  </div>
+            </div>
+        </section>
+        <section class="col-8" >
+            <h3>Lista de productos</h3>
+            <div class="card" >
+                <div class="card-body">
+                    <table id="products-list" class="table">
+                        <thead>
+                            <tr class="table-active">
+                                <td>Producto</td>
+                                <td>Precio Unitario</td>
+                                <td>Cantidad</td>
+                                <td>Subtotal</td>
+                            </tr>
+                        </thead>
+                        <tbody id="table-products"></tbody>                      
+                    </table>
+                  </div>
+            </div>
+            <div id="display-total" class="fw-bold fs-3 text-end p-3 m-2"></div>
+            <button id="btn-total" class="btn btn-success p-2 my-2 float-end">Calcular total</button>
+        </section>
+    </main>
+
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
